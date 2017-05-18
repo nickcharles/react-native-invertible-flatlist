@@ -1,0 +1,45 @@
+{
+  "name": "react-native-invertible-flat-list",
+  "version": "0.0.1",
+  "description": "A FlatList that can be flipped.",
+  "main": "dist/index.js",
+  "types": "dist/index",
+  "files": [
+    "dist/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nickcharles/react-native-invertible-flat-list.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "list",
+    "invert"
+  ],
+  "author": "Nick Morgan <nickcmorgan@gmail.com> (http://nickcmorgan.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nickcharles/react-native-invertible-flat-list/issues"
+  },
+  "homepage": "https://github.com/nickcharles/react-native-invertible-flat-list#readme",
+  "scripts": {
+    "prepublish": "# yarn run build",
+    "clean": "rm -rf dist",
+    "build": "yarn run clean && tsc",
+    "watch": "yarn run clean && tsc --watch",
+    "lint": "tslint --project .",
+    "test": "yarn run lint && tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "16.0.0-alpha.6",
+    "react-native": "^0.44.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^19.2.2",
+    "@types/react": "^15.0.24",
+    "@types/react-native": "^0.44.2",
+    "tslint": "^5.2.0",
+    "typescript": "^2.2.1"
+  }
+}

@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "declaration": true,
+        "jsx": "react-native",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "outDir": "dist/",
+        "pretty": true,
+        "strict": true,
+        "target": "es6"
+    },
+    "files": [
+        "./src/index.tsx"
+    ]
+}
