@@ -13,14 +13,21 @@ export interface InvertibleFlatListProps extends FlatListProperties<any> {
 
 export class InvertibleFlatList extends PureComponent<InvertibleFlatListProps, void> {
 
-    private inversionStyle: ViewStyle;
+    private inversionDirection: ViewStyle;
 
     public render(): JSX.Element {
-        this.inversionStyle = this.props.horizontal ? styles.horizontal : styles.vertical;
-
         const {inverted, ...forwardedProps} = this.props;
+        if (!inverted) {
+            return (
+                <FlatList
+                    {...forwardedProps}
+                />
+            )
+        }
+
+        this.inversionDirection = this.props.horizontal ? styles.horizontal : styles.vertical;
         return (
-            <View style={this.inversionStyle}>
+            <View style={this.inversionDirection}>
                 <FlatList
                     {...forwardedProps}
                     renderItem={this.renderItem}
@@ -31,7 +38,7 @@ export class InvertibleFlatList extends PureComponent<InvertibleFlatListProps, v
 
     private renderItem = (info: any): React.ReactElement<any> => {
         return (
-            <View style={this.inversionStyle}>
+            <View style={this.inversionDirection}>
                 {this.props.renderItem(info)}
             </View>
         );
