@@ -7,11 +7,11 @@ import {
     View,
 } from 'react-native';
 
-export interface InvertibleFlatListProps<ItemT> extends FlatListProperties<ItemT> {
+export interface InvertibleFlatListProps extends FlatListProperties<any> {
     inverted?: boolean;
 }
 
-export class InvertibleFlatList<ItemT> extends PureComponent<InvertibleFlatListProps<ItemT>, void> {
+export class InvertibleFlatList extends PureComponent<InvertibleFlatListProps, void> {
 
     private inversionStyle: ViewStyle;
 
@@ -44,6 +44,6 @@ const styles = StyleSheet.create({
         transform: [{scaleY: -1}],
     },
     horizontal: {
-        tansform: [{scaleX: -1}],
+        transform: [{scaleX: -1}],
     },
 });
