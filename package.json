@@ -1,6 +1,6 @@
 {
   "name": "react-native-invertible-flat-list",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "A FlatList that can be flipped.",
   "main": "src/index.js",
   "types": "src/index.d.ts",
