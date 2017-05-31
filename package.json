@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "types": "src/index.d.ts",
   "files": [
-    "dist/"
+    "src/"
   ],
   "repository": {
     "type": "git",
@@ -14,8 +14,10 @@
   "keywords": [
     "react",
     "native",
+    "flat",
     "list",
-    "invert"
+    "invert",
+    "invertible"
   ],
   "author": "Nick Morgan <nickcmorgan@gmail.com> (http://nickcmorgan.com/)",
   "license": "MIT",
@@ -23,20 +25,9 @@
     "url": "https://github.com/nickcharles/react-native-invertible-flat-list/issues"
   },
   "homepage": "https://github.com/nickcharles/react-native-invertible-flat-list#readme",
-  "scripts": {
-    "prepublish": "# yarn run build",
-    "clean": "rm -rf dist",
-    "build": "yarn run clean && tsc",
-    "watch": "yarn run clean && tsc --watch",
-    "lint": "tslint --project .",
-    "test": "yarn run lint && tsc --noEmit"
-  },
   "devDependencies": {
-    "@types/jest": "^19.2.2",
     "@types/react": "^15.0.25",
-    "@types/react-native": "^0.44.5",
-    "tslint": "^5.3.2",
-    "typescript": "^2.3.3"
+    "@types/react-native": "^0.44.5"
   },
   "peerDependencies": {
     "react": "16.0.0-alpha.6",

@@ -9,23 +9,102 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  FlatList,
+  StatusBar,
+  Switch,
 } from 'react-native';
+import { InvertibleFlatList } from 'react-native-invertible-flat-list';
 
 export default class test extends Component {
+  state = {
+    horizontal: false,
+  };
+
   render() {
+    const items = [
+      'Washington',
+      'Adams',
+      'Jefferson',
+      'Madison',
+      'Monroe',
+      'Adams',
+      'Jackson',
+      'Van Buren',
+      'Harrison',
+      'Tyler',
+      'Polk',
+      'Taylor',
+      'Fillmore',
+      'Pierce',
+      'Buchanan',
+      'Lincoln',
+      'Johnson',
+      'Grant',
+      'Hayes',
+      'Garfield',
+      'Arthur',
+      'Cleveland',
+      'Harrison',
+      'Cleveland',
+      'McKinley',
+      'Roosevelt',
+      'Taft',
+      'Wilson',
+      'Harding',
+      'Coolidge',
+      'Hoover',
+      'Roosevelt',
+      'Truman',
+      'Eisenhower',
+      'Kennedy',
+      'Johnson',
+      'Nixon',
+      'Ford',
+      'Carter',
+      'Readan',
+      'Bush',
+      'Clinton',
+      'Bush',
+      'Obama',
+      'Trump',
+    ];
+
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        <StatusBar
+          hidden={true}
+        />
+        <View style={styles.buttonContainer}>
+          <Switch
+            onValueChange={(value) => this.setState({horizontal: value})}
+            value={this.state.horizontal}
+            onTintColor={'#e31c3d'}
+            thumbTintColor={'#ffffff'}
+            tintColor={'#ffffff'}
+            style={{margin: 8}}
+          />
+          <Text style={styles.buttonText}>Horizontal</Text>
+        </View>
+        <View style={styles.container}>
+          <Text style={styles.headerText}>FlatList</Text>
+          <FlatList
+            horizontal={this.state.horizontal}
+            data={items}
+            renderItem={({item}) => <Text style={styles.normalText}>{item}</Text>}
+            keyExtractor={(item, index) => index}
+          />
+        </View>
+        <View style={styles.container}>
+          <Text style={styles.headerText}>InvertibleFlatList</Text>
+          <InvertibleFlatList
+            inverted
+            horizontal={this.state.horizontal}
+            data={items}
+            renderItem={({item}) => <Text style={styles.normalText}>{item}</Text>}
+            keyExtractor={(item, index) => index}
+          />
+        </View>
       </View>
     );
   }
@@ -34,19 +113,30 @@ export default class test extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    backgroundColor: '#ffffff',
+  },
+  buttonContainer: {
+    flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#112e51',
   },
-  welcome: {
+  buttonText: {
+    fontSize: 17,
+    color: '#ffffff',
+    fontWeight: 'bold',
+  },
+  headerText: {
     fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+    fontWeight: 'bold',
+    color: '#FFFFFF',
+    backgroundColor: '#0071bc',
+    paddingVertical: 8,
+    paddingHorizontal: 16,
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  normalText: {
+    fontSize: 17,
+    paddingHorizontal: 16,
+    color: '#212121',
   },
 });
 

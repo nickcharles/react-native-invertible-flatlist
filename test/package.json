@@ -3,12 +3,15 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"start": "node node_modules/react-native/local-cli/cli.js start",
-		"test": "jest"
+		"clean": "rm -rf ../node_modules",
+		"start": "npm run clean && node node_modules/react-native/local-cli/cli.js start",
+		"ios": "npm run clean && react-native run-ios",
+		"android": "npm run clean && react-native run-android"
 	},
 	"dependencies": {
 		"react": "16.0.0-alpha.6",
-		"react-native": "0.44.2"
+		"react-native": "0.44.2",
+		"react-native-invertible-flat-list": "file:../."
 	},
 	"devDependencies": {
 		"babel-jest": "20.0.3",
