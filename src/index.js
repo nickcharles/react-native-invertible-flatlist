@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { FlatList } from 'react-native';
+import { FlatList, StyleSheet, View } from 'react-native';
 
 export class InvertibleFlatList extends PureComponent {
     render() {
@@ -16,7 +16,7 @@ export class InvertibleFlatList extends PureComponent {
 
         this.inversionDirection = this.props.horizontal ? styles.horizontal : styles.vertical;
         return (
-            <View style={this.inversionDirection}>
+            <View style={[styles.container, this.inversionDirection]}>
                 <FlatList
                     ref={this._setFlatListRef}
                     {...forwardedProps}
@@ -32,7 +32,7 @@ export class InvertibleFlatList extends PureComponent {
 
     _renderItem = (info) => {
         return (
-            <View style={this.inversionDirection}>
+            <View style={[styles.container, this.inversionDirection]}>
                 {this.props.renderItem(info)}
             </View>
         );
@@ -64,6 +64,9 @@ export class InvertibleFlatList extends PureComponent {
 }
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
     vertical: {
         transform: [{ scaleY: -1 }],
     },
