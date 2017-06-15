@@ -1,6 +1,6 @@
 {
   "name": "react-native-invertible-flat-list",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A FlatList that can be flipped.",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -26,11 +26,11 @@
   },
   "homepage": "https://github.com/nickcharles/react-native-invertible-flat-list#readme",
   "devDependencies": {
-    "@types/react": "^15.0.25",
-    "@types/react-native": "^0.44.5"
+    "@types/react": "^15.0.28",
+    "@types/react-native": "^0.44.10"
   },
   "peerDependencies": {
-    "react": "16.0.0-alpha.6",
-    "react-native": "^0.44.0"
+    "react": "16.0.0-alpha.12",
+    "react-native": "^0.45.0"
   }
 }
