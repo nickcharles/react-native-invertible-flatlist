@@ -9,13 +9,13 @@
 		"android": "npm run clean && react-native run-android"
 	},
 	"dependencies": {
-		"react": "16.0.0-alpha.6",
-		"react-native": "0.44.2",
+		"react": "16.0.0-alpha.12",
+		"react-native": "^0.45.1",
 		"react-native-invertible-flat-list": "file:../."
 	},
 	"devDependencies": {
 		"babel-jest": "20.0.3",
-		"babel-preset-react-native": "1.9.2",
+		"babel-preset-react-native": "^2.0.0",
 		"jest": "20.0.4",
 		"react-test-renderer": "16.0.0-alpha.6"
 	},

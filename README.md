@@ -2,6 +2,15 @@
 
 An invertible FlatList for React Native.
 
+### Versions
+
+React Native | react-native-invertible-flat-list
+------------ | ---------------------------------
+0.45         | 1.1.0
+0.44         | 1.0.0
+
+Full version list located [here](https://github.com/nickcharles/react-native-invertible-flat-list/blob/master/VERSIONS.md).
+
 ## Installation
 
 npm:
@@ -16,7 +25,7 @@ yarn add react-native-invertible-flat-list
 
 ## Behavior
 
-Behaves identically to the React Native [FlatList] component(https://facebook.github.io/react-native/docs/flatlist.html) with the added functinality of being invertible. The classic example of this is a chat application where the most recent items are listed at the very bottom of a scrolling list that takes the user back in time. This works for both vertically scrolling and horizontally scrolling lists.
+Behaves identically to the React Native [FlatList](https://facebook.github.io/react-native/docs/flatlist.html) component with the added functinality of being invertible. The classic example of this is a chat application where the most recent items are listed at the very bottom of a scrolling list that takes the user back in time. This works for both vertically scrolling and horizontally scrolling lists.
 
 ### Props
 
