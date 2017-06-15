@@ -2,15 +2,6 @@
 
 An invertible FlatList for React Native.
 
-### Versions
-
-React Native | react-native-invertible-flat-list
------------- | ---------------------------------
-0.45         | 1.1.0
-0.44         | 1.0.0
-
-Full version list located [here](https://github.com/nickcharles/react-native-invertible-flat-list/blob/master/VERSIONS.md).
-
 ## Installation
 
 npm:
@@ -22,6 +13,17 @@ yarn:
 ```
 yarn add react-native-invertible-flat-list
 ```
+
+### Versions
+
+You'll need to match the package version with your version of React Native.
+
+React Native | react-native-invertible-flat-list
+------------ | ---------------------------------
+0.45         | 1.1.0
+0.44         | 1.0.0
+
+Full version list located [here](https://github.com/nickcharles/react-native-invertible-flat-list/blob/master/VERSIONS.md).
 
 ## Behavior
 
