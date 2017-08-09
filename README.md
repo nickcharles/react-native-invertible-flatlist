@@ -6,24 +6,13 @@ An invertible FlatList for React Native.
 
 npm:
 ```
-npm install --save react-native-invertible-flat-list
+npm install --save react-native-invertible-flatlist
 ```
 
 yarn:
 ```
-yarn add react-native-invertible-flat-list
+yarn add react-native-invertible-flatlist
 ```
-
-### Versions
-
-You'll need to match the package version with your version of React Native.
-
-React Native | react-native-invertible-flat-list
------------- | ---------------------------------
-0.45         | 1.1.0
-0.44         | 1.0.0
-
-Full version list located [here](https://github.com/nickcharles/react-native-invertible-flat-list/blob/master/VERSIONS.md).
 
 ## Behavior
 
@@ -49,3 +38,7 @@ If you want to test the implementation or just see a working example, this proje
 npm install
 npm run ios
 ```
+
+## Development
+
+The best way to do local development is to clone this project and install the package as a local dependency in your project. See the test project in this repository for an example of how to do this. 

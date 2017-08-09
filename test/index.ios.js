@@ -14,7 +14,7 @@ import {
   StatusBar,
   Switch,
 } from 'react-native';
-import { InvertibleFlatList } from 'react-native-invertible-flat-list';
+import { InvertibleFlatList } from 'react-native-invertible-flatlist';
 
 export default class test extends Component {
   state = {
