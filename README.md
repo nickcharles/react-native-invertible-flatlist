@@ -2,6 +2,8 @@
 
 An invertible FlatList for React Native.
 
+This is the updated and renamed version of `react-native-invertible-flat-list`. That package is out of date and unmaintained. Please use this version going forward.
+
 ## Installation
 
 npm:
