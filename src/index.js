@@ -3,7 +3,7 @@ import { FlatList, StyleSheet, View } from 'react-native';
 
 export class InvertibleFlatList extends PureComponent {
     render() {
-        const {inverted, ...forwardedProps} = this.props;
+        const {inverted, ListHeaderComponent, ListFooterComponent, ...forwardedProps} = this.props;
 
         // If not inverted, render as an ordinary FlatList
         if (!inverted) {
@@ -21,6 +21,9 @@ export class InvertibleFlatList extends PureComponent {
                     ref={this._setFlatListRef}
                     {...forwardedProps}
                     renderItem={this._renderItem}
+                    // Invert the header and footer components so they appear in the expected places
+                    ListHeaderComponent={ListFooterComponent}
+                    ListFooterComponent={ListHeaderComponent}
                 />
             </View>
         );
