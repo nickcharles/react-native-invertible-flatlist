@@ -1,4 +1,4 @@
-# Invertible Flat List
+# InvertibleFlatList
 
 An invertible FlatList for React Native.
 
@@ -43,4 +43,4 @@ npm run ios
 
 ## Development
 
-The best way to do local development is to clone this project and install the package as a local dependency in your project. See the test project in this repository for an example of how to do this. 
+The best way to do local development is to clone this project and install the package as a local dependency in your project. See the test project in this repository for an example of how to do this.
