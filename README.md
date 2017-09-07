@@ -53,10 +53,14 @@ Minimal example:
 If you want to test the implementation or just see a working example, this project comes with an example project out of the box. Once you clone, move into the `test` directory and run the following commands:
 
 ```
-npm install
-npm run ios
+yarn install
+yarn run ios
 ```
 
 ## Development
 
 The best way to do local development is to clone this project and install the package as a local dependency in your project. See the test project in this repository for an example of how to do this.
+
+## Known Issues
+
+* `ListHeaderComponent` and `ListFooterComponent` do not properly invert the content that is passed to them. This is because these properties can accept a React Component Class, a render function, or a rendered element. Because React Native now supports inversion natively, the amount of effort required to implement this properly doesn't equate with the convenience of these working perfectly. You'll need to apply the y-axis scale inversion to these components yourself before passing them to `InvertibleFlatList`.
