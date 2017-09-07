@@ -16,9 +16,25 @@ yarn:
 yarn add react-native-invertible-flatlist
 ```
 
+Import the component in your source as follows:
+```javascript
+import { InvertibleFlatList } from 'react-native-invertible-flatlist';
+```
+
 ## Behavior
 
 Behaves identically to the React Native [FlatList](https://facebook.github.io/react-native/docs/flatlist.html) component with the added functionality of being invertible. The classic example of this is a chat application where the most recent items are listed at the very bottom of a scrolling list that takes the user back in time. This works for both vertically scrolling and horizontally scrolling lists.
+
+## Usage
+
+Minimal example:
+```javascript
+<InvertibleFlatList
+  inverted
+  data={[{key: 'a'}, {key: 'b'}]}
+  renderItem={({item}) => <Text>{item.key}</Text>}
+/>
+```
 
 ### Props
 
