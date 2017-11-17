@@ -86,12 +86,12 @@ const styles = StyleSheet.create({
     horizontal: {
         ...Platform.select({
             ios: {
-                transform: [{ scaleY: -1 }]
+                transform: [{ scaleX: -1 }]
             },
             android: {
                 transform: [
                     { perspective: 1 },
-                    { scaleY: -1 }
+                    { scaleX: -1 }
                 ]
             }
         })
