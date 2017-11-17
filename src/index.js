@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { FlatList, StyleSheet, View } from 'react-native';
+import { FlatList, StyleSheet, View, Platform } from 'react-native';
 
 export class InvertibleFlatList extends PureComponent {
     render() {
@@ -71,9 +71,29 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     vertical: {
-        transform: [{ scaleY: -1 }],
+        ...Platform.select({
+            ios: {
+                transform: [{ scaleY: -1 }]
+            },
+            android: {
+                transform: [
+                    { perspective: 1 },
+                    { scaleY: -1 }
+                ]
+            }
+        })
     },
     horizontal: {
-        transform: [{ scaleX: -1 }],
-    },
+        ...Platform.select({
+            ios: {
+                transform: [{ scaleX: -1 }]
+            },
+            android: {
+                transform: [
+                    { perspective: 1 },
+                    { scaleX: -1 }
+                ]
+            }
+        })
+    }
 });
