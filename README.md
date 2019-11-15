@@ -1,4 +1,4 @@
-NOTICE: This package is now deprecated. As of React Native 0.47 the `FlatList` component supports inversion natively. Please use the native capabilities for future development.
+***NOTICE:*** This package is now deprecated. As of React Native 0.47 the `FlatList` component supports inversion natively. Please use the native capabilities for future development.
 
 # InvertibleFlatList
 
